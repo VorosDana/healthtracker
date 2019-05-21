@@ -7,12 +7,60 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/caption_holder"
+        android:layout_width="247dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="56dp"
+        android:text="Image X/Y"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/image_carousel" />
+
+    <Button
+        android:id="@+id/button_tap"
+        android:layout_width="235dp"
+        android:layout_height="104dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="tapHandler"
+        android:text="TAP!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/caption_holder" />
+
+    <ImageView
+        android:id="@+id/image_carousel"
+        android:layout_width="wrap_content"
+        android:layout_height="290dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sleepy_cat" />
+
+    <ImageButton
+        android:id="@+id/button_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/image_carousel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/image_carousel"
+        app:srcCompat="@drawable/icons8_long_arrow_left_48" />
+
+    <ImageButton
+        android:id="@+id/button_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:onClick="rightButtonHandler"
+        app:layout_constraintBottom_toBottomOf="@+id/image_carousel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/image_carousel"
+        app:srcCompat="@drawable/icons8_right_arrow_48" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
