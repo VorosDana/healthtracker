@@ -2,6 +2,7 @@ package com.example.healthtracker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        tapButton = findViewById(R.id.button_tap);
+        tapButton = findViewById(R.id.button_tap_page);
         taps = 0;
 
         images = new Carousel();
@@ -38,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tapHandler(View in) {
-        taps++;
-        tapButton.setText(taps + " taps! Keep going!");
+        Intent intent = new Intent(this, TapperActivity.class);
+        startActivity(intent);
     }
 
     private class Carousel{
