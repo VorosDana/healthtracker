@@ -10,4 +10,5 @@
     <string name="exercise_add_sets">Number of Sets</string>
     <string name="exercise_add_reps">Number of Reps</string>
     <string name="exercise_add_description">Exercise Description</string>
+    <string name="user_prefs_file">prefs-file</string>
 </resources>
