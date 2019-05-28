@@ -43,6 +43,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void exerciseDiaryButtonHandler(View view) {
+        Intent intent = new Intent(this, ExerciseListActivity.class);
+        startActivity(intent);
+    }
+
     private class Carousel{
         private Node current;
         private Node head;
