@@ -17,7 +17,7 @@ public class Exercise {
     private long id;
 
     public Exercise(){
-
+        timestamp = new Date().getTime();
     }
 
     @Ignore
