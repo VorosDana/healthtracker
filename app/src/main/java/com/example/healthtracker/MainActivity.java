@@ -1,11 +1,16 @@
 package com.example.healthtracker;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     private int taps;
     private Carousel images;
     private Button tapButton;
+    private SharedPreferences prefs;
+    public static final String NAME_KEY = "username";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +33,19 @@ public class MainActivity extends AppCompatActivity {
         images.add(R.drawable.royal_cat, "Tap for your queen!");
         images.add(R.drawable.shadowy_cat, "The cat watches. The cat approves of your tapping.");
         images.add(R.drawable.sleepy_cat, "The cat sleeps now. You sleep after you tap!");
+
+        prefs = PreferencesHandler.getPrefs(this);
+        TextView usernameField = findViewById(R.id.text_username);
+        String name = prefs.getString(NAME_KEY, "Click Here");
+        usernameField.setText("Hi, " + name + "!");
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        TextView username = findViewById(R.id.text_username);
+        String name = prefs.getString(MainActivity.NAME_KEY, "Click here");
+        username.setText("Hi, " + name + "!");
     }
 
 
@@ -40,6 +60,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void tapHandler(View in) {
         Intent intent = new Intent(this, TapperActivity.class);
+        startActivity(intent);
+    }
+
+    public void exerciseDiaryButtonHandler(View view) {
+        Intent intent = new Intent(this, ExerciseListActivity.class);
         startActivity(intent);
     }
 
@@ -99,5 +124,37 @@ public class MainActivity extends AppCompatActivity {
         int index;
         int imageId;
         String caption;
+    }
+
+    public void usernameUpdateButtonHandler(View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Enter Your Name!");
+
+        final EditText input = new EditText(this);
+        input.setInputType(InputType.TYPE_CLASS_TEXT);
+        builder.setView(input);
+
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                updateUsername(input.getText().toString());
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+
+        builder.show();
+
+
+    }
+
+    private void updateUsername(String name) {
+        prefs.edit().putString(NAME_KEY, name).apply();
+        TextView nameView = findViewById(R.id.text_username);
+        nameView.setText("Hi, " + name + "!");
     }
 }
