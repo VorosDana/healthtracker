@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Health Tracker</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="exercise">exercise</string>
+    <string name="exercise_diary_link">Exercise Diary</string>
+    <string name="exercise_add_button">Add to Diary</string>
+    <string name="exercise_add_title">Exercise Title</string>
+    <string name="exercise_add_sets">Number of Sets</string>
+    <string name="exercise_add_reps">Number of Reps</string>
+    <string name="exercise_add_description">Exercise Description</string>
+    <string name="user_prefs_file">prefs-file</string>
+    <string name="rest_api_url">https://health-tracker-401d3.herokuapp.com/</string>
 </resources>
