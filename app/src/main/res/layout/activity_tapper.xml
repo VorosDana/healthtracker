@@ -12,7 +12,7 @@
         android:layout_height="178dp"
         android:background="@color/colorButton"
         android:onClick="tapHandler"
-        android:text="Tap!"
+        android:text="@string/tap_exercise_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +26,7 @@
         android:layout_marginTop="52dp"
         android:background="@color/colorButton"
         android:onClick="backButton"
-        android:text="Back"
+        android:text="@string/button_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

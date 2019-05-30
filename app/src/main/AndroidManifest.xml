@@ -15,7 +15,6 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ExerciseAddActivity"></activity>
         <activity android:name=".ExerciseListActivity" />
-        <activity android:name=".database.ExerciseDiaryActivity" />
         <activity android:name=".TapperActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

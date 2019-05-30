@@ -39,12 +39,11 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/exercise"
+        android:text="@string/exercise_list_label"
         app:layout_constraintBottom_toTopOf="@+id/recycler_exercises"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/exercise" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/imageButton3"
@@ -68,7 +67,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:onClick="usernameUpdateButtonHandler"
-        android:text="TextView"
+        android:text="dynamic"
         app:layout_constraintEnd_toStartOf="@+id/text_exercises_main"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

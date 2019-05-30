@@ -11,7 +11,7 @@
         android:layout_width="247dp"
         android:layout_height="81dp"
         android:layout_marginTop="56dp"
-        android:text="Image X/Y"
+        android:text="dummy text Image X/Y"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_carousel" />
@@ -26,7 +26,7 @@
         android:layout_marginBottom="8dp"
         android:background="@color/colorButton"
         android:onClick="tapHandler"
-        android:text="TAP!"
+        android:text="@string/tap_exercise_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,7 +86,7 @@
         android:layout_marginTop="8dp"
         android:backgroundTint="@android:color/background_light"
         android:onClick="usernameUpdateButtonHandler"
-        android:text="TextView"
+        android:text="dynamic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
