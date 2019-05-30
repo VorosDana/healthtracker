@@ -11,7 +11,7 @@
         android:layout_width="247dp"
         android:layout_height="81dp"
         android:layout_marginTop="56dp"
-        android:text="Image X/Y"
+        android:text="dummy text Image X/Y"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_carousel" />
@@ -26,7 +26,7 @@
         android:layout_marginBottom="8dp"
         android:background="@color/colorButton"
         android:onClick="tapHandler"
-        android:text="TAP!"
+        android:text="@string/tap_exercise_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +40,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_username"
         app:srcCompat="@drawable/sleepy_cat" />
 
     <ImageButton
@@ -63,5 +63,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/image_carousel"
         app:srcCompat="@drawable/icons8_right_arrow_48" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="exerciseDiaryButtonHandler"
+        android:text="@string/exercise_diary_link"
+        app:layout_constraintBottom_toTopOf="@+id/button_tap_page"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/caption_holder" />
+
+    <TextView
+        android:id="@+id/text_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@android:color/background_light"
+        android:onClick="usernameUpdateButtonHandler"
+        android:text="dynamic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
